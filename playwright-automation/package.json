@@ -1,0 +1,24 @@
+{
+  "name": "shopease-playwright-automation",
+  "version": "1.0.0",
+  "description": "Playwright automation framework for ShopEase shopping application",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:chromium": "playwright test --project=chromium",
+    "test:report": "npx playwright show-report reports/html-report"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "allure-commandline": "^2.38.1",
+    "allure-playwright": "^3.6.0"
+  }
+}

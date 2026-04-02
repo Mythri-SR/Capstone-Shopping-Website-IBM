@@ -1,0 +1,163 @@
+{
+  "registration": {
+    "valid": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe.replace@example.com",
+      "password": "Password123!",
+      "confirmPassword": "Password123!",
+      "phone": "9876543210"
+    },
+    "invalid": {
+      "duplicateEmail": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "alice@example.com",
+        "password": "Password123!",
+        "confirmPassword": "Password123!",
+        "phone": "9876543211"
+      },
+      "invalidEmail": {
+        "firstName": "Test",
+        "lastName": "User",
+        "email": "invalid-email",
+        "password": "Password123!",
+        "confirmPassword": "Password123!",
+        "phone": "9876543212"
+      },
+      "shortPassword": {
+        "firstName": "Test",
+        "lastName": "User",
+        "email": "short.pass@example.com",
+        "password": "Ab1!",
+        "confirmPassword": "Ab1!",
+        "phone": "9876543213"
+      },
+      "weakPassword": {
+        "firstName": "Test",
+        "lastName": "User",
+        "email": "weak.pass@example.com",
+        "password": "password",
+        "confirmPassword": "password",
+        "phone": "9876543214"
+      },
+      "shortName": {
+        "firstName": "A",
+        "lastName": "B",
+        "email": "short.name@example.com",
+        "password": "Password123!",
+        "confirmPassword": "Password123!",
+        "phone": "9876543215"
+      },
+      "invalidPhone": {
+        "firstName": "Test",
+        "lastName": "User",
+        "email": "invalid.phone@example.com",
+        "password": "Password123!",
+        "confirmPassword": "Password123!",
+        "phone": "123"
+      },
+      "emptyFields": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "password": "",
+        "confirmPassword": "",
+        "phone": ""
+      },
+      "mismatchPassword": {
+        "firstName": "Test",
+        "lastName": "User",
+        "email": "mismatch@example.com",
+        "password": "Password123!",
+        "confirmPassword": "WrongPass123!",
+        "phone": "9876543216"
+      }
+    }
+  },
+  "login": {
+    "valid": {
+      "email": "alice@example.com",
+      "password": "Password123!"
+    },
+    "invalid": {
+      "wrongPassword": {
+        "email": "alice@example.com",
+        "password": "WrongPass123!"
+      },
+      "unregisteredEmail": {
+        "email": "nonexistent999@example.com",
+        "password": "Password123!"
+      },
+      "emptyEmail": {
+        "email": "",
+        "password": "Password123!"
+      },
+      "emptyPassword": {
+        "email": "alice@example.com",
+        "password": ""
+      }
+    }
+  },
+  "products": {
+    "searchKeywords": ["cotton", "shirt", "running", "watch", "book"],
+    "invalidSearch": "xyznonexistentproduct12345",
+    "categories": ["Electronics", "Clothing", "Footwear", "Books"],
+    "sortValues": {
+      "priceAsc": "price",
+      "priceDesc": "-price",
+      "nameAsc": "name",
+      "newest": "-createdAt",
+      "rating": "-rating"
+    },
+    "brandSample": "UrbanWear",
+    "inStockProductId": 7,
+    "outOfStockProductId": 5
+  },
+  "cart": {},
+  "checkout": {
+    "shippingAddress": {
+      "valid": {
+        "line1": "123 MG Road",
+        "line2": "Near Metro",
+        "city": "Bengaluru",
+        "state": "KA",
+        "zip": "560001"
+      },
+      "invalidZip": {
+        "line1": "123 MG Road",
+        "line2": "",
+        "city": "Bengaluru",
+        "state": "KA",
+        "zip": "abc"
+      }
+    },
+    "paymentMethods": {
+      "creditCard": {
+        "cardNumber": "4111111111111111",
+        "expiry": "12/28",
+        "cvv": "123"
+      },
+      "upi": {
+        "upiId": "alice@paytm"
+      }
+    }
+  },
+  "reviews": {
+    "valid": {
+      "ratingStars": 4,
+      "title": "Excellent purchase experience",
+      "comment": "This product exceeded my expectations. The quality is excellent and delivery was smooth. I would recommend it to others looking for something reliable."
+    },
+    "invalid": {
+      "shortTitle": {
+        "title": "Ok",
+        "comment": "This comment is long enough to pass validation rules for the review form."
+      },
+      "shortComment": {
+        "title": "Valid title length",
+        "comment": "short"
+      }
+    }
+  }
+}
